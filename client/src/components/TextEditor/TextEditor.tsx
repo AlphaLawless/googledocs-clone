@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
 import { useParams } from "react-router-dom";
 
+const { VITE_APP_URL } = import.meta.env;
+
 import "./TextEditor.scss";
 
 const SAVE_INTERVAL_MS = 2000;
@@ -48,7 +50,7 @@ const TextEditor = () => {
   }, [socket, quill]);
 
   useEffect(() => {
-    const socketCon = io("http://localhost:3001");
+    const socketCon = io(`${VITE_APP_URL}`);
     setSocket(socketCon);
 
     return () => {
