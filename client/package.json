@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3000"
   },
   "dependencies": {
     "quill": "^1.3.7",
@@ -16,10 +16,10 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/node": "^17.0.29",
     "@types/quill": "^2.0.9",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
-    "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^8.3.4",
     "@vitejs/plugin-react": "^1.0.7",
     "sass": "^1.49.7",
