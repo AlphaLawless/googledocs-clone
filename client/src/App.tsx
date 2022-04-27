@@ -11,12 +11,11 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/documents/:id" element={<TextEditor />} />
         <Route
           path="/"
-          render={() => <Navigate to={`/documents/${uuidV4()}`} />}
-        >
-          <Route path="/documents/:id" element={<TextEditor />} />
-        </Route>
+          element={<Navigate replace to={`/documents/${uuidV4()}`} />}
+        />
       </Routes>
     </Router>
   );
