@@ -7,9 +7,12 @@
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.3",
     "socket.io": "^4.4.1"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.11.97",
     "@types/node": "^17.0.16",
     "@types/socket.io": "^3.0.2",
     "ts-node-dev": "^1.1.8",
