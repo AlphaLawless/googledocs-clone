@@ -3,12 +3,20 @@ import { Server } from "socket.io";
 import Document from "./models/Document";
 import dbConnect from "./database/dbconnect";
 
+const { ORIGIN_CORS, PORT } = process.env;
+
+if (!ORIGIN_CORS || !PORT) {
+  throw new Error(
+    "Please define ORIGIN_CORS or PORT environment variable inside .env!"
+  );
+}
+
 dbConnect();
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: `${ORIGIN_CORS}`,
     methods: ["GET", "POST"],
   },
 });
@@ -39,4 +47,4 @@ async function findOrCreateDocument(id: number) {
   return await Document.create({ _id: id, data: defaultValue });
 }
 
-httpServer.listen(3001);
+httpServer.listen(PORT || 3001);
