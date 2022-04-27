@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-googledocs
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./database:/data/db
+
