@@ -1,0 +1,13 @@
+{
+  "name": "googledocs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:AlphaLawless/googledocs-clone.git",
+  "author": "AlphaLawless <alpha.vylly12@ufpi.edu.br>",
+  "scripts": {
+    "install:dependencies": "cd client && yarn && cd .. && cd server && yarn && ..",
+    "mongodb:up": "cd server && docker-compose up -d",
+    "mongodb:down": "cd server && docker-compose down"
+  },
+  "license": "MIT"
+}
