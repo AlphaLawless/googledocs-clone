@@ -31,13 +31,19 @@ cd googledocs-clone
 ```
 yarn install
 ```
-3. Running a container with a mongodb:
+3. Move envorinment variable:
+```
+yarn environment
+```
+4. Running a container with a mongodb:
 ```
 yarn mongodb:up
 ```
-4. Running back-end and front-end separate:
+5. Running back-end and front-end in terminal separate:
 ```
+cd client
 yarn dev:client
+cd server
 yarn dev:server
 ```
 ## License
