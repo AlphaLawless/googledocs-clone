@@ -6,8 +6,8 @@
   "author": "AlphaLawless <alpha.vylly12@ufpi.edu.br>",
   "scripts": {
     "install:dependencies": "cd client && yarn && cd .. && cd server && yarn",
-    "mongodb:up": "cd server && docker-compose up -d",
-    "mongodb:down": "cd server && docker-compose down"
+    "mongodb:up": "docker-compose up --build -d",
+    "environment": "cp ./server/.env.example ./server/.env && cp ./client/.env.example ./client/.env.local"
   },
   "license": "MIT"
 }
