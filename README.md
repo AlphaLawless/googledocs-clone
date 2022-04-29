@@ -20,6 +20,13 @@ I was just wanting to do a google clone to learn more about the Quilljs API.
 - [Docker](https://www.docker.com) - Create a container with mongodb.
 ## Running project
 
+### Prerequisites
+
+Install yarn inside your machine:
+```
+npm install --global yarn
+```
+
 To execute the project follow the steps:
 
 1. Clone this repository:
