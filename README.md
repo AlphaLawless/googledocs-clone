@@ -46,7 +46,7 @@ yarn environment
 ```
 yarn mongodb:up
 ```
-5. Running back-end and front-end in terminal separate:
+5. Run the backend and frontend on separate terminals:
 ```
 cd client
 yarn dev:client
